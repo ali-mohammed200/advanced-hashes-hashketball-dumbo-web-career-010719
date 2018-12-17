@@ -117,15 +117,13 @@ def game_hash
   }
 end
 def player_by_number(num)
-  player = nil
   game_hash.each {|teamLoc, teamObj|
     teamObj[:players].each {|pName, statsObj|
       if statsObj[:number] == num
-        player =pName
+        return pName
       end
     }
   }
-  player
 end
 def num_points_scored(name)
   # point = nil
