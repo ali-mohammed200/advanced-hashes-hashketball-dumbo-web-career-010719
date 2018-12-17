@@ -118,10 +118,8 @@ def game_hash
 end
 def player_by_number(num)
   game_hash.each {|teamLoc, teamObj|
-    teamObj[:players].each {|pName, statsObj|
-      if statsObj[:number] == num
-        return pName
-      end
+    player = teamObj[:players].find {|pName, statsObj|
+      statsObj[:number] == num
     }
   }
 end
