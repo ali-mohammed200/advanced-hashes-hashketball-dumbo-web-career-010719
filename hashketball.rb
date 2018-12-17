@@ -117,15 +117,16 @@ def game_hash
   }
 end
 def num_points_scored(name)
-  point = nil
-  game_hash.each {|teamLoc, teamObj|
-    teamObj[:players].each {|pName, statsObj|
-      if (pName == name)
-        point = statsObj[:points]
-      end
-    }
-  }
-  point
+  # point = nil
+  # game_hash.each {|teamLoc, teamObj|
+  #   teamObj[:players].each {|pName, statsObj|
+  #     if (pName == name)
+  #       point = statsObj[:points]
+  #     end
+  #   }
+  # }
+  # point
+  player_stats(name)[:points] 
 end
 def shoe_size(name)
   shoe = nil
