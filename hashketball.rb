@@ -129,15 +129,16 @@ def num_points_scored(name)
   player_stats(name)[:points]
 end
 def shoe_size(name)
-  shoe = nil
-  game_hash.each {|teamLoc, teamObj|
-    teamObj[:players].each {|pName, statsObj|
-      if (pName == name)
-        shoe = statsObj[:shoe]
-      end
-    }
-  }
-  shoe
+  # shoe = nil
+  # game_hash.each {|teamLoc, teamObj|
+  #   teamObj[:players].each {|pName, statsObj|
+  #     if (pName == name)
+  #       shoe = statsObj[:shoe]
+  #     end
+  #   }
+  # }
+  # shoe
+  player_stats(name)[:shoe]
 end
 def team_colors(team)
   colors = ""
