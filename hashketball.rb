@@ -126,7 +126,7 @@ def num_points_scored(name)
   #   }
   # }
   # point
-  player_stats(name)[:points] 
+  player_stats(name)[:points]
 end
 def shoe_size(name)
   shoe = nil
